@@ -7,6 +7,7 @@ class ConfDataloader():
     TARGET_EXT = [".jpg", ".jpeg"]
     TEST_SIZE = 0.2
     BATCH_SIZE = 4
+    SHUFFLE = True
 
 
 class ConfCnn():

@@ -17,6 +17,7 @@ IGNORE_NOT_LISTED_LABEL = ConfDataloader.IGNORE_NOT_LISTED_LABEL
 TARGET_EXT = ConfDataloader.TARGET_EXT
 TEST_SIZE = ConfDataloader.TEST_SIZE
 BATCH_SIZE = ConfDataloader.BATCH_SIZE
+SHUFFLE = ConfDataloader.SHUFFLE
 
 
 def bccd_data_path_list(bccd_dir=""):
@@ -235,7 +236,7 @@ class Dataloader(data.DataLoader):
 def gen_bccd_dataloader(
         list_label=LIST_LABEL, 
         batch_size=BATCH_SIZE,
-        shuffle=True):
+        shuffle=SHUFFLE):
     list_img_path, list_xml_path = bccd_data_path_list()
     transform_img = ImageDataTransform()
     ds = Dataset(
